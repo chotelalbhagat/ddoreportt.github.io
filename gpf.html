@@ -78,7 +78,7 @@
       <a href="https://chotelalbhagat.github.io/ddoreportt.github.io/gpf.html">GPF</a>
     </div>
   </div>
-<div class="container">
+<div class="container" style="width: 1175px;">
 
     <div class="col-md-12">
         <div class="col-md-12">
@@ -217,13 +217,14 @@
                 <option value="one">GPF</option>
                 <option value="two">NPS</option>
             </select>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button type="button" class="btn btn-primary" onclick="myFunction()">Search</button>
+            <button type="button" class="btn btn-primary" onclick="myGPF()">GPF Search</button>
+          <button type="button" class="btn btn-primary" onclick="myNPS()">NPS Search</button>
         </div>
     </div>
 </div>
 <div class="container" id="myDIV" style="display:none">
     <h2>Finance Report</h2>
-    <p>Report Format for GPF & NPS</p>
+    <p>Report Format for GPF</p>
     <span class="bi bi-file-spreadsheet"  style="color:green;font-size:30px; float:right"></span>
     <span class="bi bi-file-pdf red-color" style="color:red;font-size:30px; float:right"> </span>
     <table class="table table-striped">
@@ -234,7 +235,6 @@
                 <th>EmpName</th>
                 <th>Designation</th>
                 <th>GPFSubNo.</th>
-                <th>PRAN No.</th>
                 <th>Subscribed Amt.</th>
                 <th>Total</th>
             </tr>
@@ -246,7 +246,6 @@
                 <td>Jhon Doe</td>
                 <td>Programmer</td>
                 <td>50</td>
-                <td>--</td>
                 <td>800</td>
                 <td>9999</td>
             </tr>
@@ -256,26 +255,53 @@
                 <td>Ram Doe</td>
                 <td>Developer</td>
                 <td>12</td>
-                <td>--</td>
                 <td>500</td>
                 <td>100000</td>
             </tr>
             <tr>
-                <td>3</td>
+                <td></td>
+                <td></td>
+                <th>Grand Total</th>
+                <td></td>
+                <th>62</th>
+                <th>1300</th>
+                <th>109999</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container" id="myNPS" style="display:none">
+    <h2>Finance Report</h2>
+    <p>Report Format for NPS</p>
+    <span class="bi bi-file-spreadsheet"  style="color:green;font-size:30px; float:right"></span>
+    <span class="bi bi-file-pdf red-color" style="color:red;font-size:30px; float:right"> </span>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>SL.No.</th>
+                <th>EMPCode/PIMSCode</th>
+                <th>EmpName</th>
+                <th>Designation</th>
+                <th>PRAN No.</th>
+                <th>Subscribed Amt.</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
                 <td>5555</td>
                 <td>Brown Doe</td>
                 <td>Programme Officer</td>
-                <td>--</td>
                 <td>4563</td>
                 <td>300</td>
                 <td>985632</td>
             </tr>
             <tr>
-                <td>4</td>
+                <td>2</td>
                 <td>9999</td>
                 <td>Ram Doe</td>
                 <td>Developer</td>
-                <td>--</td>
                 <td>8789</td>
                 <td>500</td>
                 <td>789654</td>
@@ -285,17 +311,26 @@
                 <td></td>
                 <th>Grand Total</th>
                 <td></td>
-                <th>62</th>
                 <th>13352</th>
-                <th>2100</th>
-                <th>1885285</th>
+                <th>800</th>
+                <th>1775286</th>
             </tr>
         </tbody>
     </table>
 </div>
 <script>
-    function myFunction() {
+    function myGPF() {
         var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<script>
+    function myNPS() {
+        var x = document.getElementById("myNPS");
         if (x.style.display === "block") {
             x.style.display = "none";
         } else {
